@@ -40,7 +40,7 @@ def detect_gesture():
         return jsonify({"message": "No captured image found. Capture an image first."}), 400
 
     # Load YOLO model and detect gestures
-    yolo = YOLO("D:/MajorProjects/MJRPJR/runs/detect/train3/weights/best.pt")
+    yolo = YOLO("YOUR PATH TO THE WEIGHTS FILE")
     results = yolo.predict(image_path, save=True, show=False)
 
     # Define class labels mapping
